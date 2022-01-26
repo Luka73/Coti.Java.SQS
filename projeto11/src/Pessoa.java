@@ -1,4 +1,4 @@
-public class Pessoa {
+public class Pessoa implements Identificavel{
     private String cpf;
     private String nome;
 
@@ -7,15 +7,16 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public String getIdentificador() {
-        return cpf;
-    }
-
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String getIdentificador() {
+        return this.cpf;
     }
 }
